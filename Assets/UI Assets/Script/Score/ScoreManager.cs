@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         //Get the highScore from player prefs if it is there, 0 otherwise.
-        hiScoreCount = PlayerPrefs.GetInt(hiScoreKey,0);  
+        hiScoreText.text = PlayerPrefs.GetInt("Best",0).ToString();  
     }
 
     // Update is called once per frame
@@ -38,9 +38,9 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + Mathf.Round (scoreCount); 
         hiScoreText.text = "Best: " + Mathf.Round (hiScoreCount);
     }
-    void OnDisable()
+    public void hiScore()
     {
-        //If our scoree is greter than highscore, set new higscore and save.
+        //If our scoree is greater than highscore, set new higscore and save.
         if(scoreCount>hiScoreCount)
         {
             PlayerPrefs.SetInt(hiScoreKey, score);
