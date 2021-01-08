@@ -11,10 +11,10 @@ public class SpeedPowerup : MonoBehaviour
         if (collision.tag == "Player")
         {
             GameObject player = collision.gameObject; 
-            Pan playerScript = player.GetComponent<Pan>(); 
+            Character2DController playerScript = player.GetComponent<Character2DController>(); 
             if (playerScript)
             {
-                playerScript.moveSpeed += increase; 
+                playerScript.MovementSpeed += increase; 
                 Debug.Log("Power up picked up!"); 
                 Destroy(gameObject); 
             }
