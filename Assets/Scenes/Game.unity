@@ -3007,6 +3007,7 @@ GameObject:
   - component: {fileID: 661434293}
   - component: {fileID: 661434292}
   - component: {fileID: 661434291}
+  - component: {fileID: 661434294}
   m_Layer: 0
   m_Name: enemy_DRAGONFLY+BITOL
   m_TagString: Untagged
@@ -3107,6 +3108,19 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &661434294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661434289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1651a4faf35fe449af470fb25b4340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1
 --- !u!1 &665423961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4987,7 @@ GameObject:
   - component: {fileID: 954471316}
   - component: {fileID: 954471321}
   - component: {fileID: 954471320}
+  - component: {fileID: 954471323}
   m_Layer: 9
   m_Name: PLAYER
   m_TagString: Player
@@ -5134,6 +5149,24 @@ CircleCollider2D:
   m_Offset: {x: 0.019266576, y: 0.06911409}
   serializedVersion: 2
   m_Radius: 0.38929284
+--- !u!114 &954471323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954471315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19eb60470ec00447b0fd2f3b915a55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 1628816928}
+  - {fileID: 1653217307}
+  - {fileID: 50150969}
+  life: 3
+  Closedskull: {fileID: 21300000, guid: d17419b7c2622164a978302581045d81, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

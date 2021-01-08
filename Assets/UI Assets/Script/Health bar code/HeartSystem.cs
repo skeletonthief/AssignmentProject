@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class HeartSystem : MonoBehaviour
 {
+    //This is the player's health (player is given 3 lives)
     public GameObject[] hearts; //[0] [1] [2]
     public int life;    //3 
     //public Animator animator; 

@@ -12,7 +12,7 @@ public class DefensePowerUp : MonoBehaviour
         if (collision.tag == "Player")
         {
             GameObject player = collision.gameObject; 
-            Pan playerScript = player.GetComponent<Pan>(); 
+            Character2DController playerScript = player.GetComponent<Character2DController>(); 
             anim = player.GetComponent<Animator>();
             anim.SetBool("Boost", true);   
             
