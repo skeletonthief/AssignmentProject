@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     public float pointsPerSecond; 
     public int score = 0;
     string hiScoreKey = "Best";
-
+    public PauseMenu pauseMenu; 
     public bool scoreIncreasing; 
 
     // Start is called before the first frame update
@@ -47,4 +47,10 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
+
+    //public void GameIsPaused()
+    //{
+    //    pauseMenu= true; 
+    //    pauseMenu.ToggleEndScore(score);
+    //}
 }

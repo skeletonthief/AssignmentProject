@@ -8,7 +8,20 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI; 
-
+    public GameObject hiScoreText;
+    public static float hiScoreCount = 0; 
+    public ScoreManager theScoreManager;
+    //public void ToggleEndScore(float score); 
+        void Start()
+    {
+        setscore(0); 
+    }
+    public void setscore(float scoretoadd)
+    {
+        hiScoreCount += scoretoadd;
+        theScoreManager = FindObjectOfType<ScoreManager>(); 
+    }
+    
     // Update is called once per frame
     void Update()
     {

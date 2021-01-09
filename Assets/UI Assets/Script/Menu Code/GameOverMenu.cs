@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    private ScoreManager theScoreManager; 
+    public ScoreManager theScoreManager; 
     // Start is called before the first frame update
     void Start()
     {
