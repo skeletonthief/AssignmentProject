@@ -6,20 +6,17 @@ public class HurtPlayer : MonoBehaviour
 {
     public int damageToGive; 
     
-    // Enemy deals damage to player 
-    void OnCollisionEnter2D (Collision2D other)
+    // In this script enemy deals damage to player 
+    void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.gameObject.tag == "Player")
+        if(other.tag == "Player")
         {
-            other.gameObject.GetComponent<HeartSystem>().TakeDamage(damageToGive); 
+            HeartSystem heartSystem = other.GetComponent<HeartSystem>();
+            if(heartSystem !=null)
+            {
+                heartSystem.TakeDamage(damageToGive);
+            }
         }
     }
-    //void OnTriggerEnter2D(Collider2D other) 
-    //{
-    //    if(other.gameObject.tag == "Player")
-    //    {
-    //        other.gameObject.GetComponent<HeartSystem>().TakeDamage(damageToGive);
-    //    }
-    //}
 }
 
