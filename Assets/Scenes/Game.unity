@@ -679,13 +679,16 @@ GameObject:
   - component: {fileID: 117177103}
   - component: {fileID: 117177104}
   - component: {fileID: 117177105}
+  - component: {fileID: 117177107}
+  - component: {fileID: 117177106}
+  - component: {fileID: 117177108}
   m_Layer: 0
   m_Name: DRAGONFLY_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &117177103
 Transform:
   m_ObjectHideFlags: 0
@@ -769,6 +772,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &117177106
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117177102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.17985988, y: 0.009486595}
+  m_Size: {x: 0.8863091, y: 0.44259298}
+  m_Direction: 1
+--- !u!114 &117177107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117177102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90079c456c145994eafe90f9831e119d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 1204236354}
+--- !u!114 &117177108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117177102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1651a4faf35fe449af470fb25b4340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 0
 --- !u!1 &145947829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,7 +3055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &661434290
 Transform:
   m_ObjectHideFlags: 0
@@ -3019,7 +3064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661434289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.41, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1456014542}
@@ -5091,7 +5136,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &954471318
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5279,11 +5324,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.2
+  near clip plane: 2
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.41
+  orthographic size: 3.49
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5307,7 +5352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000017881393, y: -0.74, z: -14}
+  m_LocalPosition: {x: 0.00000020861626, y: -0.74, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6752,6 +6797,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1204236353}
+  - component: {fileID: 1204236356}
+  - component: {fileID: 1204236354}
+  - component: {fileID: 1204236355}
   m_Layer: 0
   m_Name: enemy_DRAGONFLY_P1
   m_TagString: Untagged
@@ -6768,12 +6816,90 @@ Transform:
   m_GameObject: {fileID: 1204236352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 117177103}
   m_Father: {fileID: 515023318}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1204236354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204236352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.29
+  height: 0.74
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 5
+  gravity: {x: 0, y: 0, z: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 1
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!114 &1204236355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204236352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 954471319}
+--- !u!114 &1204236356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204236352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &1220003143
 GameObject:
   m_ObjectHideFlags: 0
@@ -8558,6 +8684,8 @@ GameObject:
   - component: {fileID: 1456014543}
   - component: {fileID: 1456014545}
   - component: {fileID: 1456014546}
+  - component: {fileID: 1456014548}
+  - component: {fileID: 1456014547}
   m_Layer: 0
   m_Name: DRAGONFLY+BITOL_P2
   m_TagString: Untagged
@@ -8673,7 +8801,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1651a4faf35fe449af470fb25b4340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 1
+  damageToGive: 0
+--- !u!70 &1456014547
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456014541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.21894419, y: 0.042572595}
+  m_Size: {x: 0.86326855, y: 0.5105343}
+  m_Direction: 1
+--- !u!70 &1456014548
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456014541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12771364, y: -0.5480349}
+  m_Size: {x: 1.3754934, y: 0.6456947}
+  m_Direction: 1
 --- !u!1 &1456773241
 GameObject:
   m_ObjectHideFlags: 0
@@ -10290,8 +10450,8 @@ MonoBehaviour:
   m_Follow: {fileID: 954471319}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3.41
-    NearClipPlane: 0.2
+    OrthographicSize: 3.49
+    NearClipPlane: 2
     FarClipPlane: 1000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -10311,7 +10471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941942035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000017881393, y: -0.74, z: -14}
+  m_LocalPosition: {x: 0.00000020861626, y: -0.74, z: -14}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 563624554}
@@ -10336,7 +10496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1946087311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10896,13 +11056,18 @@ GameObject:
   m_Component:
   - component: {fileID: 2087222272}
   - component: {fileID: 2087222273}
+  - component: {fileID: 2087222278}
+  - component: {fileID: 2087222274}
+  - component: {fileID: 2087222275}
+  - component: {fileID: 2087222276}
+  - component: {fileID: 2087222277}
   m_Layer: 0
   m_Name: BITOL_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2087222272
 Transform:
   m_ObjectHideFlags: 0
@@ -10911,7 +11076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087222271}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1447024863}
@@ -10967,6 +11132,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2087222274
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087222271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010019077, y: 0.10297922}
+  m_Size: {x: 1.3090904, y: 0.7192617}
+  m_Direction: 1
+--- !u!114 &2087222275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087222271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1cb6f4573c7f4aa062d27029f1c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 954471319}
+  agroRange: 5
+  moveSpeed: 2
+--- !u!50 &2087222276
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087222271}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 10
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &2087222277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087222271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1651a4faf35fe449af470fb25b4340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 0
+--- !u!70 &2087222278
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087222271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010019077, y: 0.10297922}
+  m_Size: {x: 1.3090904, y: 0.7192617}
+  m_Direction: 1
 --- !u!1 &2094876733
 GameObject:
   m_ObjectHideFlags: 0
