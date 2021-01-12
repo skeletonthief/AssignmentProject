@@ -1,29 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
+
 
 public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
-    public Text hiScoreText; 
-    public float scoreCount; 
-    public float hiScoreCount; 
-    public float pointsPerSecond; 
-    public int score = 0;
-    string hiScoreKey = "Best";
-    public PauseMenu pauseMenu; 
-    public bool scoreIncreasing; 
+    public Text hiScoreText;
 
-    // Start is called before the first frame update
+    public float scoreCount; 
+    public float hiScoreCount;
+
+    public float pointsPerSecond;
+
+    public bool scoreIncreasing;
+
     void Start()
     {
-        //Get the highScore from player prefs if it is there, 0 otherwise.
-        hiScoreText.text = PlayerPrefs.GetInt("Best",0).ToString();  
+        if(PlayerPrefs.GetFloat("HighScore") != null)
+        {
+            hiScoreCount = PlayerPrefs.GetFloat("HighScore"); 
+        }
     }
 
-    // Update is called once per frame
+
     void Update()
+
     {
         if(scoreIncreasing)
         {
@@ -33,24 +35,11 @@ public class ScoreManager : MonoBehaviour
         if(scoreCount > hiScoreCount)
         {
             hiScoreCount = scoreCount;
+            PlayerPrefs.SetFloat("HighScore", hiScoreCount);
         }
+
 
         scoreText.text = "Score: " + Mathf.Round (scoreCount); 
-        hiScoreText.text = "Best: " + Mathf.Round (hiScoreCount);
-    }
-    public void hiScore()
-    {
-        //If our score is greater than highscore, set new higscore and save.
-        if(scoreCount>hiScoreCount)
-        {
-            PlayerPrefs.SetInt(hiScoreKey, score);
-            PlayerPrefs.Save();
-        }
-    }
-
-    //public void GameIsPaused()
-    //{
-    //    pauseMenu= true; 
-    //    pauseMenu.ToggleEndScore(score);
-    //}
+        hiScoreText.text = "HighScore: " + Mathf.Round (hiScoreCount);
+    }   
 }
