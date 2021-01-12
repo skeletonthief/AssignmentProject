@@ -44,9 +44,10 @@ public class HeartSystem : MonoBehaviour
         {
             life -= d; //1-1=0
             Debug.Log("-1 heart"); 
+            Destroy(hearts[life].gameObject);  //[0]                                //this is till we add animation
             //For now just a simple sprite change
             //this.gameObject.GetComponent<SpriteRenderer>().sprite = Closedskull;
-            //Destroy(hearts[life].gameObject);  //[0]
+            
             // Animation when player takes damage instead of being destroyed 
             //anim = hearts.GetComponent<Animator>();                           //I need to fix this 
             //anim.SetBool("Boost", true); 
