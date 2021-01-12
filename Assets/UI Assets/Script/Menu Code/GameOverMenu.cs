@@ -6,26 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    public int HighScore = 0; 
-    public Text hiScoreText;
-    //public ScoreManager theScoreManager; 
-    // Start is called before the first frame update
+
+    public Text hiScoreText; 
+    
     private void Start()
     {
-        //theScoreManager = FindObjectOfType<ScoreManager>(); 
-        HighScore = 0; 
+        hiScoreText.text = "High Score: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore")) ;
     }
-    private void Update() 
-    {
-        hiScoreText.text = "Best:" + PlayerPrefs.GetInt("highscore"); 
-    }
+
     // Restart the game
     public void RestartGame()
     {
-        if (HighScore > PlayerPrefs.GetInt("highscore"))
-        {
-            PlayerPrefs.SetInt("highscore", HighScore); 
-        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

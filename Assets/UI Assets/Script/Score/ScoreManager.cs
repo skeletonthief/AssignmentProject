@@ -5,41 +5,32 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
-    public Text hiScoreText;
-
-    public float scoreCount; 
-    public float hiScoreCount;
+    public Text scoreTextG;
+    public Text hiScoreTextG;
 
     public float pointsPerSecond;
 
-    public bool scoreIncreasing;
+    public float GameScore = 0f;
+    public float HighScore; 
 
-    void Start()
+    public void Start()
     {
-        if(PlayerPrefs.GetFloat("HighScore") != null)
-        {
-            hiScoreCount = PlayerPrefs.GetFloat("HighScore"); 
-        }
+
     }
-
-
-    void Update()
+void Update()
 
     {
-        if(scoreIncreasing)
+        GameScore += pointsPerSecond * Time.deltaTime;
+        PlayerPrefs.SetFloat("CurrentScore", GameScore);
+        HighScore = GameScore;
+
+
+        scoreTextG.text = "Score: " + Mathf.Round (GameScore); 
+        
+        if(GameScore > PlayerPrefs.GetFloat("HighScore"))
         {
-            scoreCount += pointsPerSecond = Time.deltaTime;
+            PlayerPrefs.SetFloat("HighScore", HighScore); 
         }
-
-        if(scoreCount > hiScoreCount)
-        {
-            hiScoreCount = scoreCount;
-            PlayerPrefs.SetFloat("HighScore", hiScoreCount);
-        }
-
-
-        scoreText.text = "Score: " + Mathf.Round (scoreCount); 
-        hiScoreText.text = "HighScore: " + Mathf.Round (hiScoreCount);
+        hiScoreTextG.text = "HighScore: " + Mathf.Round (PlayerPrefs.GetFloat("HighScore"));
     }   
 }
