@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
     }
     public void hiScore()
     {
-        //If our scoree is greater than highscore, set new higscore and save.
+        //If our score is greater than highscore, set new higscore and save.
         if(scoreCount>hiScoreCount)
         {
             PlayerPrefs.SetInt(hiScoreKey, score);
