@@ -11,7 +11,7 @@ public class GameOverMenu : MonoBehaviour
     
     private void Start()
     {
-        hiScoreText.text = "High Score: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore")) ;
+        hiScoreText.text = "High Score: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
     }
 
     // Restart the game
