@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformGenetrator : MonoBehaviour
-{
-    [SerializeField]private Transform platformsStart; 
-    [SerializeField] private Transform platforms; 
-    private void Awake()
-    {
-        Transform lastPlatfomsTransform; 
-        //Spawning the platforms by finding the end position
-        lastPlatfomsTransform =SpawnPlatform(platformsStart.Find("EndPosition").position); 
-        lastPlatfomsTransform =SpawnPlatform(lastPlatfomsTransform.Find("EndPosition").position);
-        lastPlatfomsTransform =SpawnPlatform(lastPlatfomsTransform.Find("EndPosition").position);
-        lastPlatfomsTransform =SpawnPlatform(lastPlatfomsTransform.Find("EndPosition").position);
-        
-    }
-    
-    private Transform SpawnPlatform(Vector3 spawnPosition)
-    {
-        Transform platformsTransform = Instantiate(platforms,spawnPosition, Quaternion.identity);
-        return platformsTransform; 
-    }
+//public class PlatformGenetrator : MonoBehaviour
+//{
+//    [SerializeField]private Transform platformsStart; 
+//    [SerializeField] private Transform platforms; 
+//    private void Awake()
+//    {
+//        Transform lastPlatfomsTransform; 
+//        //Spawning the platforms by finding the end position
+//        lastPlatfomsTransform =SpawnPlatform(platformsStart.Find("EndPosition").position); 
+//        lastPlatfomsTransform =SpawnPlatform(lastPlatfomsTransform.Find("EndPosition").position);
+//        lastPlatfomsTransform =SpawnPlatform(lastPlatfomsTransform.Find("EndPosition").position);
+//        lastPlatfomsTransform =SpawnPlatform(lastPlatfomsTransform.Find("EndPosition").position);
+//        
+//    }
+///   
+//    private Transform SpawnPlatform(Vector3 spawnPosition)
+//    {
+///        Transform platformsTransform = Instantiate(platforms,spawnPosition, Quaternion.identity);
+//        return platformsTransform; 
+//    }
     
     
     
@@ -48,5 +48,5 @@ public class PlatformGenetrator : MonoBehaviour
         }
     }
     */
-}
+//}
 

@@ -10,6 +10,7 @@ TagManager:
   - Snow
   - Wheat
   - Enemy
+  - boom
   layers:
   - Default
   - TransparentFX
