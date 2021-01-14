@@ -62,3 +62,6 @@ TagManager:
   - name: Frame
     uniqueID: 1435831497
     locked: 0
+  - name: Platforms
+    uniqueID: 3604526881
+    locked: 0
