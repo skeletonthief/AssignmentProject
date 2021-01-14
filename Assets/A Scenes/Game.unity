@@ -2432,7 +2432,7 @@ GameObject:
   - component: {fileID: 495541419}
   - component: {fileID: 495541420}
   m_Layer: 0
-  m_Name: Platforms
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4725,6 +4725,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852392928}
   m_CullTransparentMesh: 0
+--- !u!1 &858152147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858152148}
+  m_Layer: 0
+  m_Name: EndPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858152148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858152147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.48, y: -14.08, z: -1.7477868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &893213202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5481,7 +5511,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 954471315}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 2786c02b5c42ad647ae340e979ab519c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -8847,9 +8877,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53f952e6e30d7b439b0f3885d721e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePlatform: {fileID: 1583053973}
-  generationPoint: {fileID: 533373235}
-  distanceBetween: 5
+  platformsStart: {fileID: 495541419}
+  platforms: {fileID: 5475033911196247926, guid: 481b571a81c9bc3488594500fcaa6d5f,
+    type: 3}
 --- !u!4 &1342968666
 Transform:
   m_ObjectHideFlags: 0
@@ -8858,7 +8888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342968664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.81, y: -14.33, z: -14.246094}
+  m_LocalPosition: {x: 20, y: -14.4, z: -14.246094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
