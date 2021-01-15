@@ -10,9 +10,9 @@ public class lavaAI_R : MonoBehaviour
 	private bool moveRight = true;
 
 	void Update () {
-		if (transform.position.x > 54.34f)
+		if (transform.position.x > 81.37f)
 			moveRight = false;
-		if (transform.position.x < -65.99f)
+		if (transform.position.x < -82.08f)
 			moveRight = true;
 
 		if (moveRight)

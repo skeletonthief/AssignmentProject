@@ -12,7 +12,7 @@ public class lavaAI_L : MonoBehaviour
 	void Update () {
 		if (transform.position.x > 81.37f)
 			moveRight = false;
-		if (transform.position.x < -82.08)
+		if (transform.position.x < -82.08f)
 			moveRight = true;
 		
 		if (moveRight)
@@ -20,4 +20,5 @@ public class lavaAI_L : MonoBehaviour
 		else
 			transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
 	}
+	
 }
