@@ -10,7 +10,7 @@ TagManager:
   - Snow
   - Wheat
   - Enemy
-  - boom
+  - 'Elevator '
   layers:
   - Default
   - TransparentFX
@@ -62,6 +62,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3670422495
+    locked: 0
+  - name: 'Elevator '
+    uniqueID: 1949748455
     locked: 0
   - name: Platforms
     uniqueID: 3604526881
