@@ -3,6 +3,8 @@
 public class Character2DController : MonoBehaviour
 
 {
+  [SerializeField]
+  private Transform TriggerElevator;
     public Animator animator;
 
     public float MovementSpeed = 1;
@@ -28,10 +30,6 @@ public class Character2DController : MonoBehaviour
         _rigidbody.AddForce(new Vector2(0,JumpForce),ForceMode2D.Impulse);
       }
       
-    }
-    private void OnTriggerEnter2D(Collider2D collider) 
-    {
-      Debug.Log("Trigger!");
     }
 
 }

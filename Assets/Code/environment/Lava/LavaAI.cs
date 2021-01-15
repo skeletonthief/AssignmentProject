@@ -9,7 +9,7 @@ public class LavaAI : MonoBehaviour
     private Vector3 Npos;
 
     [SerializeField]
-    private float MoveSpeed;
+    private float MoveSpeed= 0;
     [SerializeField]
     private Transform transformB;   
     [SerializeField]

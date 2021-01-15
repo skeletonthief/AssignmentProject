@@ -9,7 +9,7 @@ public class ElevatorCon : MonoBehaviour
     private Vector3 Npos;
 
     [SerializeField]
-    private float MoveSpeed;
+    private float MoveSpeed= 0;
     [SerializeField]
     private Transform transformB;   
     [SerializeField]
@@ -17,12 +17,12 @@ public class ElevatorCon : MonoBehaviour
 
     void Start()
     {
+        
         EposA = childTransform.localPosition;
         EposB = transformB.localPosition;
         Npos = EposB;
     }
 
-    
     void Update()
     {
         Move();
@@ -32,4 +32,6 @@ public class ElevatorCon : MonoBehaviour
     {
         childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, Npos, MoveSpeed * Time.deltaTime);
     }
+    
+    
 }

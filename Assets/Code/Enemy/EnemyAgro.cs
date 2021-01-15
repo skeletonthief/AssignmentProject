@@ -7,9 +7,9 @@ public class EnemyAgro : MonoBehaviour
     [SerializeField] 
     Transform player;
     [SerializeField] 
-    float agroRange;
+    float agroRange = 0;
     [SerializeField] 
-    float moveSpeed;
+    float moveSpeed = 0;
 
     Rigidbody2D rd2d;
 
