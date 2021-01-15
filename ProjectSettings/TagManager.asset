@@ -54,15 +54,15 @@ TagManager:
   - name: Enemy
     uniqueID: 769920519
     locked: 0
-  - name: Player
-    uniqueID: 3670422495
-    locked: 0
-  - name: Platforms
-    uniqueID: 3604526881
-    locked: 0
   - name: Lava
     uniqueID: 3093824139
     locked: 0
   - name: Frame
     uniqueID: 1435831497
+    locked: 0
+  - name: Player
+    uniqueID: 3670422495
+    locked: 0
+  - name: Platforms
+    uniqueID: 3604526881
     locked: 0
