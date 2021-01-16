@@ -32,6 +32,5 @@ public class ElevatorCon : MonoBehaviour
     {
         childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, Npos, MoveSpeed * Time.deltaTime);
     }
-    
-    
+
 }
