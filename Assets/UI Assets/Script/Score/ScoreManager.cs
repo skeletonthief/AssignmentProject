@@ -33,4 +33,8 @@ void Update()
         }
         hiScoreTextG.text = "HighScore: " + Mathf.Round (PlayerPrefs.GetFloat("HighScore"));
     }   
+    public void AddScore (int pointsToAdd)
+    {
+        GameScore += pointsToAdd; 
+    }
 }
