@@ -54,6 +54,9 @@ TagManager:
   - name: Enemy
     uniqueID: 769920519
     locked: 0
+  - name: Platforms
+    uniqueID: 3604526881
+    locked: 0
   - name: Frame-1
     uniqueID: 170250773
     locked: 0
@@ -68,7 +71,4 @@ TagManager:
     locked: 0
   - name: 'Elevator '
     uniqueID: 1949748455
-    locked: 0
-  - name: Platforms
-    uniqueID: 3604526881
     locked: 0
