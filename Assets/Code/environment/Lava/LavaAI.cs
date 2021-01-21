@@ -9,16 +9,16 @@ public class LavaAI : MonoBehaviour
     private Vector3 Npos;
 
     [SerializeField]
-    private float MoveSpeed= 0;
+    private float FollowSpeed= 0;
     [SerializeField]
-    private Transform transformB;   
+    private Transform Endposition;   
     [SerializeField]
-    private Transform childTransform; 
+    private Transform SpritTransform; 
 
     void Start()
     {
-        EposA = childTransform.localPosition;
-        EposB = transformB.localPosition;
+        EposA = SpritTransform.localPosition;
+        EposB = Endposition.localPosition;
         Npos = EposB;
     }
 
@@ -30,6 +30,17 @@ public class LavaAI : MonoBehaviour
 
     private void Move()
     {
-        childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, Npos, MoveSpeed * Time.deltaTime);
+        SpritTransform.localPosition = Vector3.MoveTowards(SpritTransform.localPosition, Npos, FollowSpeed * Time.deltaTime);
+    }
+
+    
+    void OnCollisionEnter(Collision col)
+
+    {
+     if(col.gameObject.CompareTag("Player")) //If a player hits the collider of this obstacle
+        {
+                Destroy(col.gameObject);
+        }
     }
 }
+

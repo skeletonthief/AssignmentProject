@@ -9,12 +9,17 @@ public class Trigger_P : MonoBehaviour
     private Vector3 Npos;
     
     Rigidbody2D rd2d; 
-    [SerializeField]private Transform transformB;
-    [SerializeField]private Transform childTransform;
+    [SerializeField]
+    private Transform transformB;
+    [SerializeField]
+    private Transform childTransform;
     
-    [SerializeField] Transform player; 
-    [SerializeField] float agroRange = 0;  
-    [SerializeField]private float MoveSpeed= 0;
+    [SerializeField] 
+    Transform player; 
+    [SerializeField] 
+    float Proximity = 0;  
+    [SerializeField] 
+    private float PlatformSpeed= 0;
 
     void Start()
     {
@@ -28,7 +33,7 @@ public class Trigger_P : MonoBehaviour
     {
         float distToPlayer = Vector2.Distance(transform.position, player.position);
         
-        if(distToPlayer < agroRange)
+        if(distToPlayer < Proximity)
         {
             //Stert elevetior
             Move();
@@ -45,6 +50,6 @@ public class Trigger_P : MonoBehaviour
     }
     void Move()
     {
-        childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, Npos, MoveSpeed * Time.deltaTime);
+        childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, Npos, PlatformSpeed * Time.deltaTime);
     }
 }
