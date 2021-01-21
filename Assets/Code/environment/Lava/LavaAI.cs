@@ -34,10 +34,14 @@ public class LavaAI : MonoBehaviour
     }
 
     
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter2D(Collider2D col)
 
     {
-     if(col.gameObject.CompareTag("Player")) //If a player hits the collider of this obstacle
+        if(col.gameObject.CompareTag("Player")) //If a player hits the collider of this obstacle
+        {
+                Destroy(col.gameObject);
+        }
+        if(col.gameObject.CompareTag("Enemy")) //If a Enemy hits the collider of this obstacle
         {
                 Destroy(col.gameObject);
         }
