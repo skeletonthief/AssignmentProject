@@ -11,6 +11,7 @@ TagManager:
   - Wheat
   - Enemy
   - 'Elevator '
+  - Tiger
   layers:
   - Default
   - TransparentFX
