@@ -37,10 +37,21 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if(moveInput < 0){
+        //if (moveInput == 0)
+        //{
+        //    anim.SetBool("isRunning",false);
+        //}
+        //else 
+        //{
+        //    anim.SetBool("isRunning",true);
+        //}
+        
+        if(moveInput < 0)
+        {
             transform.eulerAngles = new Vector3(0,0,0);
         }
-        else if(moveInput > 0){
+        else if(moveInput > 0)
+        {
             transform.eulerAngles = new Vector3(0,180,0);
         }
         

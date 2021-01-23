@@ -1694,7 +1694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372744033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9, y: -2.671998, z: -4.9413996}
+  m_LocalPosition: {x: -59.239998, y: -34.781998, z: -4.9413996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2088364820}
@@ -1712,14 +1712,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 396663409}
+  - component: {fileID: 396663407}
   - component: {fileID: 396663408}
   - component: {fileID: 396663414}
   - component: {fileID: 396663413}
   - component: {fileID: 396663411}
   - component: {fileID: 396663410}
   - component: {fileID: 396663412}
-  - component: {fileID: 396663407}
   - component: {fileID: 396663415}
+  - component: {fileID: 396663416}
   m_Layer: 0
   m_Name: Player_G
   m_TagString: Player
@@ -1737,7 +1738,7 @@ Animator:
   m_GameObject: {fileID: 396663406}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db1068b12b10a384d98a57e6b60c7d8b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 24a1ea8710fb98e49bb0f75ba8b2bad8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1904,7 +1905,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396663406}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea5fbe8fc3bf004dbad8322b6c2c3b7, type: 3}
   m_Name: 
@@ -1918,6 +1919,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   extraJumpsValue: 2
+--- !u!114 &396663416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396663406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fafb9780ed82a46b736f3cfcd85883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpForce: 10
+  feetPos: {fileID: 1173514272}
+  checkRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  jumpTime: 13
 --- !u!1 &405910282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +2759,7 @@ GameObject:
   - component: {fileID: 514624422}
   - component: {fileID: 514624421}
   - component: {fileID: 514624420}
+  - component: {fileID: 514624423}
   m_Layer: 9
   m_Name: Player_R
   m_TagString: Player
@@ -2863,6 +2885,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &514624423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514624417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea5fbe8fc3bf004dbad8322b6c2c3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerElevator: {fileID: 803276257}
+  speed: 10
+  jumpForce: 10
+  groundcheck: {fileID: 1173514272}
+  checkRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  extraJumpsValue: 2
 --- !u!114 &514624424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3378,7 +3421,7 @@ MonoBehaviour:
   transformB: {fileID: 1152925596}
   childTransform: {fileID: 602641561}
   player: {fileID: 396663409}
-  Proximity: 3
+  Proximity: 5
   PlatformSpeed: 3
 --- !u!50 &602641566
 Rigidbody2D:
@@ -4302,7 +4345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832259776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.1, y: 13.6, z: 0}
+  m_LocalPosition: {x: 75.59, y: 13.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1647506942}
@@ -5312,6 +5355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 954471319}
+  - component: {fileID: 954471316}
   m_Layer: 9
   m_Name: PLAYER
   m_TagString: Player
@@ -5319,6 +5363,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &954471316
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954471315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &954471319
 Transform:
   m_ObjectHideFlags: 0
@@ -6937,6 +7000,7 @@ GameObject:
   - component: {fileID: 1266236781}
   - component: {fileID: 1266236780}
   - component: {fileID: 1266236779}
+  - component: {fileID: 1266236782}
   m_Layer: 9
   m_Name: Player_B
   m_TagString: Player
@@ -7062,6 +7126,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1266236782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266236776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea5fbe8fc3bf004dbad8322b6c2c3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerElevator: {fileID: 803276257}
+  speed: 10
+  jumpForce: 10
+  groundcheck: {fileID: 405910283}
+  checkRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  extraJumpsValue: 2
 --- !u!114 &1266236783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7608,7 +7693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379740103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.15, y: -0.15999997, z: 0}
+  m_LocalPosition: {x: -28.989996, y: -32.269997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7715,7 +7800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386840480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.7, y: 0.28573292, z: -3.8271484}
+  m_LocalPosition: {x: -34.439995, y: -31.824266, z: -3.8271484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8954,7 +9039,7 @@ MonoBehaviour:
   transformB: {fileID: 119228265}
   childTransform: {fileID: 1647506942}
   player: {fileID: 396663409}
-  Proximity: 3
+  Proximity: 5
   PlatformSpeed: 3
 --- !u!1 &1653217307
 GameObject:
@@ -11103,7 +11188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105031289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.1, y: -0.3, z: 0}
+  m_LocalPosition: {x: -8.04, y: -32.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 708818666}
