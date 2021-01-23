@@ -55,15 +55,18 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0,180,0);
         }
         
-        
-        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
+            //replace space with anything = (Space) 
+        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
             isJumping = true;
             jumpTimeclock = jumpTime;
             RB.velocity = Vector2.up * jumpForce;
         }
-        if(Input.GetKey(KeyCode.Space) && isJumping == true){
+        if(Input.GetKey(KeyCode.Space) && isJumping == true)
+        {
 
-            if(jumpTimeclock > 0){
+            if(jumpTimeclock > 0)
+            {
                 RB.velocity = Vector2.up * jumpForce;
                 jumpTimeclock -= Time.deltaTime;
             }    else{
