@@ -1719,6 +1719,7 @@ GameObject:
   - component: {fileID: 396663410}
   - component: {fileID: 396663412}
   - component: {fileID: 396663407}
+  - component: {fileID: 396663415}
   m_Layer: 0
   m_Name: Player_G
   m_TagString: Player
@@ -1849,7 +1850,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396663406}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489b93c3914cf384288eb16ed8aa4588, type: 3}
   m_Name: 
@@ -1896,6 +1897,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &396663415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396663406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea5fbe8fc3bf004dbad8322b6c2c3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerElevator: {fileID: 803276257}
+  speed: 10
+  jumpForce: 10
+  groundcheck: {fileID: 1173514272}
+  checkRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  extraJumpsValue: 2
 --- !u!1 &405910282
 GameObject:
   m_ObjectHideFlags: 0
@@ -5305,7 +5327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954471315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.8, y: -3.07, z: 0}
+  m_LocalPosition: {x: 62.54, y: -3.15, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 396663409}
@@ -5393,7 +5415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.8, y: -0.79999995, z: -10}
+  m_LocalPosition: {x: 62.54, y: -0.8800001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 123406000}
@@ -10224,7 +10246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941942035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.8, y: -0.79999995, z: -10}
+  m_LocalPosition: {x: 62.54, y: -0.8800001, z: -10}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 563624554}

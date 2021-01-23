@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController2J : MonoBehaviour
 {
+    [SerializeField]
+    private Transform TriggerElevator;
     public float speed; 
     public float jumpForce;
     private float moveInput;
