@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
-
     private Animator anim;
 
     void Start()
@@ -78,6 +77,6 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
-    
     }
+
 }

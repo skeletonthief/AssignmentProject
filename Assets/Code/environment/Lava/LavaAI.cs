@@ -7,6 +7,7 @@ public class LavaAI : MonoBehaviour
     private Vector3 EposA;
     private Vector3 EposB;
     private Vector3 Npos;
+    Rigidbody2D rd2d; 
 
     [SerializeField]
     private float FollowSpeed= 0;
@@ -22,18 +23,21 @@ public class LavaAI : MonoBehaviour
         Npos = EposB;
     }
 
-    
     void Update()
     {
-        Move();
+        
     }
 
-    private void Move()
+    void StopMove()
+    {
+        rd2d.velocity = new Vector2(0,0);
+    }
+
+    void Move()
     {
         SpritTransform.localPosition = Vector3.MoveTowards(SpritTransform.localPosition, Npos, FollowSpeed * Time.deltaTime);
     }
 
-    
     void OnTriggerEnter2D(Collider2D col)
 
     {
@@ -47,4 +51,3 @@ public class LavaAI : MonoBehaviour
         }
     }
 }
-
