@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
 
     private bool isGrounded;
-    public Transform  feetPos;
+    public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    private float jumpTimeclock;
+    private float jumpTimeClock;
     public float jumpTime;
     private bool isJumping;
 
@@ -58,17 +58,18 @@ public class PlayerController : MonoBehaviour
         if(isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
-            jumpTimeclock = jumpTime;
+            jumpTimeClock = jumpTime;
             RB.velocity = Vector2.up * jumpForce;
         }
+        
         if(Input.GetKey(KeyCode.Space) && isJumping == true)
         {
 
-            if(jumpTimeclock > 0)
+            if(jumpTimeClock > 0)
             {
                 RB.velocity = Vector2.up * jumpForce;
-                jumpTimeclock -= Time.deltaTime;
-            }    else{
+                jumpTimeClock -= Time.deltaTime;
+            } else {
                 isJumping = false;
             }
             

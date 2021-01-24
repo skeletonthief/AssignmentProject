@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - 'Elevator '
   - Tiger
+  - Frame
   layers:
   - Default
   - TransparentFX

@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
+    //
 
-    /*private GameObject Lavaint;
-    
-    private void Start()
+    private void Start() // call lava script
     {
-        Lavaint = GameObject.FindWithTag("Lava");
-    }     
-    private void Update()
+    //    lavecode = GetComponent<lavaAI>();
+    }
+
+//When the player collides with the triger 
+    private void OnTriggerEnter2D (Collider2D other)
     {
-        if (Lavaint.GetComponent<LavaAI>().EnteredTrigger)
+        if (other.gameObject.tag == "player")
         {
-
+            Debug.Log("hit");
         }
-    }*/
+    }
 
 }
