@@ -78,5 +78,4 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
         }
     }
-
 }

@@ -14,7 +14,10 @@ public class LavaAI : MonoBehaviour
     [SerializeField]
     private Transform Endposition;   
     [SerializeField]
-    private Transform SpritTransform; 
+    private Transform SpritTransform;
+
+    //public bool EnteredTrigger;
+    //public GameObject CollisionWith;
 
     void Start()
     {
@@ -25,7 +28,7 @@ public class LavaAI : MonoBehaviour
 
     void Update()
     {
-        
+    
     }
 
     void StopMove()
@@ -50,4 +53,13 @@ public class LavaAI : MonoBehaviour
                 Destroy(col.gameObject);
         }
     }
+
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == tiger)
+    //        EnteredTrigger = true;
+    //        CollisionWith = other.gameObject;
+    //}
+
 }
+

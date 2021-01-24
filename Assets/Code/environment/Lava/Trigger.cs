@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    void start()
-    {
+
+    /*private GameObject Lavaint;
     
-    }
-    void Update() 
+    private void Start()
     {
-        
-    }
+        Lavaint = GameObject.FindWithTag("Lava");
+    }     
+    private void Update()
+    {
+        if (Lavaint.GetComponent<LavaAI>().EnteredTrigger)
+        {
+
+        }
+    }*/
 
 }
