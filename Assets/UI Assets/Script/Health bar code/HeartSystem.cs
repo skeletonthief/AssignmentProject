@@ -58,7 +58,7 @@ public class HeartSystem : MonoBehaviour
     }
 
     //checking if shield is activated 
-    void OnTriggerEnter2D(Collider2D other) //Enemies need to be added for this to work 
+    /*void OnTriggerEnter2D(Collider2D other) //Enemies need to be added for this to work 
     {
         if(!shield.ActiveShield)
         {
@@ -71,5 +71,5 @@ public class HeartSystem : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-    }
+    }*/
 }
