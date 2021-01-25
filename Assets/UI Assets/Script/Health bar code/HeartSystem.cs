@@ -10,6 +10,7 @@ public class HeartSystem : MonoBehaviour
     public int life;    //3 
     //public Transform TriggerAnimation;
     //private Animation anim; 
+    private DefensePowerUp shield;
     private bool dead; 
     
     private void Start()
@@ -17,6 +18,7 @@ public class HeartSystem : MonoBehaviour
         life = hearts.Length;
         //anim = gameObject.GetComponent<Animation>();
         //anim.Stop("CloseHeart");
+        shield = GetComponent<DefensePowerUp>(); 
     }
 
 
@@ -40,10 +42,8 @@ public class HeartSystem : MonoBehaviour
             //anim["CloseHeart"].wrapMode = WrapMode.Once;
             //anim.Play("CloseHeart");
             //Debug.Log("-1 heart");
-            
             //Destroy(hearts[life].gameObject);  //[0]                                
             ////yield return new WaitForSeconds (0.5f);
-            //For now just a simple sprite change
             // Animation when player takes damage instead of being destroyed 
             //anim = hearts.GetComponent<Animator>();                           //I need to fix this 
             //anim.SetBool("Boost", true); 
@@ -54,9 +54,22 @@ public class HeartSystem : MonoBehaviour
                 SceneManager.LoadScene("Game Over");
             }
         }
-        //else
-        //{
-        //    anim.Stop("CloseHeart");
-        //}
+        
+    }
+
+    //checking if shield is activated 
+    void OnTriggerEnter2D(Collider2D other) //Enemies need to be added for this to work 
+    {
+        if(!shield.ActiveShield)
+        {
+            if(other.tag == "Enemy" )
+            {
+                Destroy(this.gameObject);
+            }
+            else if(other.tag == "Lava")
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

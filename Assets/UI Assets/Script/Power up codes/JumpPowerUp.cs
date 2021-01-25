@@ -17,17 +17,17 @@ public class JumpPowerUp : MonoBehaviour
 
     IEnumerator Pickup(Collider2D player)
     {
-        Character2DController playerScript = player.GetComponent<Character2DController>(); 
+        PlayerController playerScript = player.GetComponent<PlayerController>(); 
         if (playerScript)
             {
-                playerScript.JumpForce += increase; 
+                playerScript.jumpForce += increase; 
                 Debug.Log("Power up picked up!"); 
                 GetComponent<SpriteRenderer>().enabled = false;
                 GetComponent<Collider2D>().enabled = false;
                 //Wait x amount of seconds
                 yield return new WaitForSeconds(duration);
                 //Reverse the effect on our player
-                playerScript.JumpForce = 5f;
+                playerScript.jumpForce = 5f;
                 Destroy(gameObject); 
             }
     }

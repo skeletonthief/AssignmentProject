@@ -4,23 +4,44 @@ using UnityEngine;
 
 public class DefensePowerUp : MonoBehaviour
 {
-    // For defense an animation will occur
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public GameObject shield; 
+    private bool activeShield; 
+    // Start is called before the first frame update
+    void Start()
     {
-        Animator anim; 
-        if (collision.tag == "Player")
+        activeShield = false; 
+        shield.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag ("Player"))
         {
-            GameObject player = collision.gameObject; 
-            Character2DController playerScript = player.GetComponent<Character2DController>(); 
-            anim = player.GetComponent<Animator>();
-            anim.SetBool("Boost", true);   
-            
-            if (playerScript)
+            if(!activeShield)
             {
-                Debug.Log("Power up picked up!"); 
-                Destroy(gameObject); 
+                shield.SetActive(true);
+                activeShield = true; 
             }
+            else
+            {
+                shield.SetActive(false);
+                activeShield = false; 
+            }
+        }
+        Debug.Log("Power up picked up!"); 
+        Destroy(gameObject); 
+    }
+
+    public bool ActiveShield
+    {
+        get 
+        {
+            return activeShield; 
+        }
+        set
+        {
+            activeShield = value; 
         }
     }
 }

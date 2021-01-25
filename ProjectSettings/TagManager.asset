@@ -74,3 +74,6 @@ TagManager:
   - name: 'Elevator '
     uniqueID: 1949748455
     locked: 0
+  - name: Shield
+    uniqueID: 1581268345
+    locked: 0
