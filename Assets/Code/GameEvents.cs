@@ -12,12 +12,12 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action onDoorwayTriggerEnter;
-    public void DoorwayTriggerEnter()
+    public event Action<int> onDoorwayTriggerEnter;
+    public void DoorwayTriggerEnter(int id)
     {
         if (onDoorwayTriggerEnter != null)
         {
-            onDoorwayTriggerEnter();
+            onDoorwayTriggerEnter(id);
         }
     }
 

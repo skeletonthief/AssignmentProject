@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
+    public int id;
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        GameEvents.current.DoorwayTriggerEnter();
+        GameEvents.current.DoorwayTriggerEnter(id);
     }
 
 }
