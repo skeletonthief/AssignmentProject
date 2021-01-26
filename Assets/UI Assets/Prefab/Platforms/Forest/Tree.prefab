@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3554778996902942241}
   - component: {fileID: 6779235612850199546}
   - component: {fileID: 2915514879656535821}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rock_Forest
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,9 +206,9 @@ GameObject:
   - component: {fileID: 8183801031190154412}
   - component: {fileID: 8183801031190154414}
   - component: {fileID: 8183801031190154413}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Branches_ (1)
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,9 +314,9 @@ GameObject:
   - component: {fileID: 8183801031770239323}
   - component: {fileID: 8183801031770239325}
   - component: {fileID: 8183801031770239324}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Branches_ (2)
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,9 +422,9 @@ GameObject:
   - component: {fileID: 8183801032105926824}
   - component: {fileID: 8183801032105926826}
   - component: {fileID: 8183801032105926825}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Branches_ (3)
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,9 +530,9 @@ GameObject:
   - component: {fileID: 8183801032401655994}
   - component: {fileID: 8183801032401655995}
   - component: {fileID: 8183801032401655996}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Branches_
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -638,9 +638,9 @@ GameObject:
   - component: {fileID: 8183801032569241320}
   - component: {fileID: 8183801032569241322}
   - component: {fileID: 8183801032569241321}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Branches_ (4)
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
