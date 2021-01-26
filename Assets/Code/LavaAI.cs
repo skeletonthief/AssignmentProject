@@ -17,7 +17,7 @@ public class LavaAI : MonoBehaviour
         {
             //0f (end location), 0f (speed)
             // speed not lower tham (30f) 
-            LeanTween.moveLocalX(gameObject, -89.8f, 50f).setEaseOutQuad();
+            LeanTween.moveLocalX(gameObject, -89.8f, 60f).setEaseOutQuad();
         }
     }
 
