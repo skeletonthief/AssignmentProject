@@ -7,7 +7,7 @@ public class Trigger_P : MonoBehaviour
     private Vector3 EposA;
     private Vector3 EposB;
     private Vector3 Npos;
-    //public GameObject player;
+    public GameObject player;
 
     Rigidbody2D rd2d; 
     [SerializeField]
@@ -16,7 +16,7 @@ public class Trigger_P : MonoBehaviour
     private Transform childTransform;
     
     [SerializeField] 
-    Transform player; 
+    Transform playerTransform; 
     [SerializeField] 
     float Proximity = 0;  
     [SerializeField] 
@@ -28,7 +28,8 @@ public class Trigger_P : MonoBehaviour
     void Start()
     {
         //Set the tag of this GameObject to player
-        //player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
+        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
         rd2d = GetComponent<Rigidbody2D>();
         EposA = childTransform.localPosition;
         EposB = transformB.localPosition;
@@ -37,7 +38,8 @@ public class Trigger_P : MonoBehaviour
 
     void Update()
     {
-        float distToplayer = Vector2.Distance(transform.position, player.position);
+        //playerTransform = new Vector2(player.transform.position.x,player.transform.position.y);
+        float distToplayer = Vector2.Distance(transform.position, playerTransform.position);
         
         if(distToplayer < Proximity)
         {
