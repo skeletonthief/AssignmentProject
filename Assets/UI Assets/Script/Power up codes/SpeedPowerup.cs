@@ -27,7 +27,7 @@ public class SpeedPowerup : MonoBehaviour
                 //Wait x amount of seconds
                 yield return new WaitForSeconds(duration);
                 //Reverse the effect on our player
-                playerScript.speed = 6f;
+                playerScript.speed = 10f;
                 Destroy(gameObject); 
             }
     }
