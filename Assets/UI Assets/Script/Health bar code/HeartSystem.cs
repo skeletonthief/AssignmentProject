@@ -8,16 +8,14 @@ public class HeartSystem : MonoBehaviour
     //This is the player's health (player is given 3 lives)
     public GameObject[] hearts; //[0] [1] [2]
     public int life;    //3 
-    //public Transform TriggerAnimation;
-    //private Animation anim; 
     private DefensePowerUp shield;
     private bool dead; 
+    public GameObject closeskull; 
+    private bool skullclosed; 
     
     private void Start()
     {
         life = hearts.Length;
-        //anim = gameObject.GetComponent<Animation>();
-        //anim.Stop("CloseHeart");
         shield = GetComponent<DefensePowerUp>(); 
     }
 
@@ -38,16 +36,16 @@ public class HeartSystem : MonoBehaviour
         if (life >= 1)
         {
             life -= d; //1-1=0
-            //animation when player takes damage                // STIL DOESNT WORK 
-            //anim["CloseHeart"].wrapMode = WrapMode.Once;
-            //anim.Play("CloseHeart");
-            //Debug.Log("-1 heart");
-            //Destroy(hearts[life].gameObject);  //[0]                                
-            ////yield return new WaitForSeconds (0.5f);
-            // Animation when player takes damage instead of being destroyed 
-            //anim = hearts.GetComponent<Animator>();                           //I need to fix this 
-            //anim.SetBool("Boost", true); 
-            //then to stop animation 
+            if(!skullclosed)
+            {
+                closeskull.SetActive(true);
+                skullclosed = true; 
+            }
+            else
+            {
+                closeskull.SetActive(false);
+                skullclosed = false; 
+            }
             if(life < 1)
             {
                 dead = true; 
@@ -58,7 +56,7 @@ public class HeartSystem : MonoBehaviour
     }
 
     //checking if shield is activated 
-    /*void OnTriggerEnter2D(Collider2D other) //Enemies need to be added for this to work 
+    void OnTriggerEnter2D(Collider2D other) //Enemies need to be added for this to work 
     {
         if(!shield.ActiveShield)
         {
@@ -71,5 +69,5 @@ public class HeartSystem : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-    }*/
+    }
 }

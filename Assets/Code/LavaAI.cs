@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LavaAI : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class LavaAI : MonoBehaviour
         if(col.gameObject.CompareTag("Player")) //If a player hits the collider of this obstacle
         {
                 Destroy(col.gameObject);
+                // Then loads Game Over Menu
+                SceneManager.LoadScene("Game Over");
         }
         if(col.gameObject.CompareTag("Enemy")) //If a Enemy hits the collider of this obstacle
         {
