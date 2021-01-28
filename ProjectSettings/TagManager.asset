@@ -13,6 +13,8 @@ TagManager:
   - 'Elevator '
   - Tiger
   - Frame
+  - BigStump
+  - SmallStump
   layers:
   - Default
   - TransparentFX
@@ -24,8 +26,8 @@ TagManager:
   - 
   - BackGround
   - Player
-  - Obstical
-  - 
+  - Ground
+  - Enemy_Back
   - 
   - 
   - 
@@ -53,14 +55,14 @@ TagManager:
   - name: BackGround
     uniqueID: 2444391223
     locked: 0
-  - name: Enemy
-    uniqueID: 769920519
-    locked: 0
   - name: Platforms
     uniqueID: 3604526881
     locked: 0
   - name: Frame-1
     uniqueID: 170250773
+    locked: 0
+  - name: Enemy
+    uniqueID: 769920519
     locked: 0
   - name: Player
     uniqueID: 3670422495

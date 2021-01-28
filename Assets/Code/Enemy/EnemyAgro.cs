@@ -5,24 +5,28 @@ using UnityEngine;
 public class EnemyAgro : MonoBehaviour
 {
     [SerializeField] 
-    Transform player;
+    Transform playerTransform; 
     [SerializeField] 
     float agroRange = 0;
     [SerializeField] 
     float moveSpeed = 0;
+    public GameObject player;
 
     Rigidbody2D rd2d;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
         rd2d = GetComponent<Rigidbody2D>();
     }
 
     
     void Update()
     {
-        float distToPlayer = Vector2.Distance(transform.position, player.position);
-        
+        //float distToPlayer = Vector2.Distance(transform.position, player.position);
+        float distToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+
         if(distToPlayer < agroRange)
         {
             //chase player
@@ -37,17 +41,17 @@ public class EnemyAgro : MonoBehaviour
 
     void ChasePlayer()
     {
-        if(transform.position.x < player.position.x)
+        if(transform.position.x < playerTransform.position.x)
         {
             //enemy left side move right
             rd2d.velocity = new Vector2(moveSpeed,0);
-            transform.localScale = new Vector2 (-1,1);
+            transform.localScale = new Vector2 (1,1);
         }
         else 
         {
             //enemy right side move left
             rd2d.velocity = new Vector2(-moveSpeed,0);
-            transform.localScale = new Vector2 (1,1);
+            transform.localScale = new Vector2 (-1,1);
         }
     }
     void StopChasingPlayer()
