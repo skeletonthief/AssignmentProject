@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1124356776437207442}
   m_Layer: 0
   m_Name: 02_CLAMP
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

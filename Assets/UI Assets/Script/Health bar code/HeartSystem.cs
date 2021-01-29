@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class HeartSystem : MonoBehaviour
@@ -8,14 +9,17 @@ public class HeartSystem : MonoBehaviour
     //This is the player's health (player is given 3 lives)
     public GameObject[] hearts; //[0] [1] [2]
     public int life;    //3 
+    private Sprite[] _livesSprites;
+    [SerializeField]
+    private Image _livesImg; 
     private DefensePowerUp shield;
     private bool dead; 
-    public GameObject closeskull; 
-    private bool skullclosed; 
+
     
     private void Start()
     {
         life = hearts.Length;
+        _livesImg.sprite = _livesSprites[life];
         shield = GetComponent<DefensePowerUp>(); 
     }
 
@@ -36,16 +40,6 @@ public class HeartSystem : MonoBehaviour
         if (life >= 1)
         {
             life -= d; //1-1=0
-            if(!skullclosed)
-            {
-                closeskull.SetActive(true);
-                skullclosed = true; 
-            }
-            else
-            {
-                closeskull.SetActive(false);
-                skullclosed = false; 
-            }
             if(life < 1)
             {
                 dead = true; 
@@ -61,10 +55,6 @@ public class HeartSystem : MonoBehaviour
         if(!shield.ActiveShield)
         {
             if(other.tag == "Enemy" )
-            {
-                Destroy(this.gameObject);
-            }
-            else if(other.tag == "Lava")
             {
                 Destroy(this.gameObject);
             }
