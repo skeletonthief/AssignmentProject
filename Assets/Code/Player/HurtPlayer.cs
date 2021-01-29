@@ -15,6 +15,7 @@ public class HurtPlayer : MonoBehaviour
             if(heartSystem !=null)
             {
                 heartSystem.TakeDamage(damageToGive);
+                Debug.Log("Ouch!"); 
             }
         }
     }
