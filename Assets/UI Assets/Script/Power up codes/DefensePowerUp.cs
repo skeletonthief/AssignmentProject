@@ -5,6 +5,7 @@ using UnityEngine;
 public class DefensePowerUp : MonoBehaviour
 {
     public GameObject shield; 
+    public float duration = 4f;
     private bool activeShield; 
     // Start is called before the first frame update
     void Start()
@@ -31,15 +32,8 @@ public class DefensePowerUp : MonoBehaviour
         }
         Debug.Log("Power up picked up!"); 
         Destroy(gameObject); 
-        
-        if(other.CompareTag("Enemy"))
-        {
-            shield.SetActive(false);
-            Destroy(this.gameObject);
-            
-        }
+        StartCoroutine( Pickup(other) );
     }
-
     public bool ActiveShield
     {
         get 
@@ -52,4 +46,15 @@ public class DefensePowerUp : MonoBehaviour
         }
     }
 
+    IEnumerator Pickup(Collider2D player)
+    {
+        Debug.Log("Power up picked up!"); 
+        //Wait x amount of seconds
+        yield return new WaitForSeconds(duration);
+        //Reverse the effect on our player
+        shield.SetActive(false);
+        activeShield = false; 
+        Destroy(shield); 
+    }
+    
 }

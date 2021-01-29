@@ -14,8 +14,8 @@ public class HurtPlayer : MonoBehaviour
             HeartSystem heartSystem = other.GetComponent<HeartSystem>();
             if(heartSystem !=null)
             {
-                heartSystem.TakeDamage(damageToGive);
                 Debug.Log("Ouch!"); 
+                heartSystem.TakeDamage(damageToGive);
             }
         }
     }
