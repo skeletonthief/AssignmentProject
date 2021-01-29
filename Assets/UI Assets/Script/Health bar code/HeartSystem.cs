@@ -6,43 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class HeartSystem : MonoBehaviour
 {
-    //This is the player's health (player is given 3 lives)
     public GameObject[] hearts; //[0] [1] [2]
-    public int life;    //3 
-    //private Sprite[] _livesSprites;
-    //[SerializeField]
-    //private Image _livesImg; 
-    private DefensePowerUp shield;
+    private int life; //3 lives
     private bool dead; 
 
-    
     private void Start()
     {
-        life = hearts.Length;
-        //_livesImg.sprite = _livesSprites[life];
-        shield = GetComponent<DefensePowerUp>(); 
+        life = hearts.Length; 
     }
-
-
-    // Update is called once per frame
     void Update()
     {
-        if (dead == true)
+        if(dead == true)
         {
-            //Set dead code
-            Debug.Log("GAME OVER");
+            //Load Game Over Menu
+            Debug.Log("you ded"); 
         }
-        
     }
 
     public void TakeDamage(int d)
     {
         if (life >= 1)
-        Destroy(this.gameObject);
-        Debug.Log("Ouch!"); 
         {
-            life -= d; //1-1=0
-            if(life < 1)
+            life -= d;  //3-1=2
+            Debug.Log("Ouch!"); 
+            Destroy(hearts[life].gameObject); //[2]
+            if(life <1)
             {
                 dead = true; 
                 SceneManager.LoadScene("Game Over");
@@ -50,6 +38,4 @@ public class HeartSystem : MonoBehaviour
         }
         
     }
-
-    //checking if shield is activated 
 }

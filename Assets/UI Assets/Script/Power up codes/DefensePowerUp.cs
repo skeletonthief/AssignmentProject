@@ -17,6 +17,7 @@ public class DefensePowerUp : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other)
     {
+        PlayerController player = other.GetComponent<PlayerController>();
         if (other.CompareTag ("Player"))
         {
             if(!activeShield)
