@@ -17,17 +17,19 @@ public class JumpingEnemy : MonoBehaviour
     public enum Animations
     {
         Idel = 0,
-        Jumping = 2,
+        Jumping = 1,
         Falling = 2,
     };
+
     public Animations currentAnim;
 
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public Animator anim;
+    
     public float idleTime = 2f;
-    public float currentIdelTime = 0;
-    public bool isIdel = true;
+    public float currentIdleTime = 0;
+    public bool isIdle = true;
 
 
     void Start()
@@ -38,23 +40,23 @@ public class JumpingEnemy : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    
     void Update()
     {
         
     }
+
     void FixedUpdate()
     {
         //This if statment is called if we are idle 
-        if(isIdel)
+        if(isIdle)
         {
             //add time to current time
-            currentIdelTime += Time.deltaTime;
+            currentIdleTime += Time.deltaTime;
             //if 2 sec pass
-            if(currentIdelTime >= idleTime)
+            if(currentIdleTime >= idleTime)
             {
                 //tell to jump
-                currentIdelTime = 0;
+                currentIdleTime = 0;
                 faceingRight = !faceingRight;
                 spriteRenderer.flipX = faceingRight;
                 Jump();
@@ -63,31 +65,36 @@ public class JumpingEnemy : MonoBehaviour
 
         // is on ground
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f,transform.position.y - 0.5f),
-        new Vector2(transform.position.x + 0.5f,transform.position.y - 0.51f),whatIsGround);
+        new Vector2(transform.position.x + 0.5f,transform.position.y - 0.51f), whatIsGround);
         
         //we fall on ground
-        if(isGrounded && !isJumping)
-        {
+        if(isGrounded && !isFalling)
+        {   //set idle
             isFalling = false;
-            isFalling = false;
-            isIdel = true;
+            isJumping = false;
+            isIdle = true;
+            ChangeAnimation(Animations.Idel);
         }
-        else if(transform.position.y > lastYpos && ! isIdel)
-        {
+        else if(transform.position.y > lastYpos && !isGrounded && !isIdle)
+        {   //set jump up
             isJumping = true;
             isFalling = false;
+            ChangeAnimation(Animations.Jumping);
         }
-        else if (transform.position.y < lastYpos && ! isIdel)
-        {
+        else if (transform.position.y < lastYpos && !isGrounded && !isIdle)
+        {   //set falling
             isJumping = false;
             isFalling = true;
+            ChangeAnimation(Animations.Falling);
         }
+
         lastYpos = transform.position.y;
     }
 
     void Jump()
     {
         isJumping = true;
+        isIdle = false;
         int direction = 0;
         if(faceingRight == true)
         {
@@ -97,9 +104,17 @@ public class JumpingEnemy : MonoBehaviour
         {
             direction = -1;
         }
-        rb.velocity = new Vector2(jumpForceX = direction, jumpForceY);
-        Debug.Log("Jump");
+        rb.velocity = new Vector2(jumpForceX * direction, jumpForceY);
+        Debug.Log("Jump!");
     }
 
+    void ChangeAnimation(Animations newAnim)
+    {
+        if(currentAnim != newAnim)
+        {
+            currentAnim = newAnim;
+            anim.SetInteger("state", (int)newAnim);
+        }
+    }
 
 }
