@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5378954986291778780}
   - component: {fileID: 5378954986291784483}
   - component: {fileID: 5378954986291778781}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lava_Rock1
   m_TagString: SmallStump
   m_Icon: {fileID: 0}

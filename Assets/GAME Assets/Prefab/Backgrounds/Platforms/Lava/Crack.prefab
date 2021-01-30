@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648418719611948010}
   - component: {fileID: 648418719611948009}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crack
   m_TagString: SmallStump
   m_Icon: {fileID: 0}

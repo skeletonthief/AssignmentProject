@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5747706917008621832}
   - component: {fileID: 5747706917008621833}
   - component: {fileID: 1843971028043903879}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lava_Cave
   m_TagString: BigStump
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5747706918210003887}
   - component: {fileID: 5747706918210003884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

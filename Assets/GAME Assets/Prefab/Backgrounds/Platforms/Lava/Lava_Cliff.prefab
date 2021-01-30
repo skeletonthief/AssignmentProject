@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9010222857578188288}
   - component: {fileID: 9010222857578188303}
   - component: {fileID: 5358114109072003504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lava_Cliff
   m_TagString: BigStump
   m_Icon: {fileID: 0}

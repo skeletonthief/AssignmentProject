@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5182992703321831041}
   - component: {fileID: 1614701073066957360}
   - component: {fileID: 891141032344867704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rock_Desert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -690440415
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5fbb6edc87066ed44b6cb42d03722a90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
