@@ -6,17 +6,19 @@ public class JumpingEnemy : MonoBehaviour
 {
     public bool faceingRight = false;
     public LayerMask whatIsGround;
+
     public bool isGrounded = false;
     public bool isFalling = false;
     public bool isJumping = false;
 
     public float jumpForceX = 2f;
     public float jumpForceY = 4f;
-    public float lastYpos = 0;
+
+    public float lastYPos = 0;
 
     public enum Animations
     {
-        Idel = 0,
+        Idle = 0,
         Jumping = 1,
         Falling = 2,
     };
@@ -34,7 +36,7 @@ public class JumpingEnemy : MonoBehaviour
 
     void Start()
     {
-        lastYpos = transform.position.y;
+        lastYPos = transform.position.y;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -48,12 +50,12 @@ public class JumpingEnemy : MonoBehaviour
     void FixedUpdate()
     {
         //This if statment is called if we are idle 
-        if(isIdle)
+        if (isIdle)
         {
             //add time to current time
             currentIdleTime += Time.deltaTime;
             //if 2 sec pass
-            if(currentIdleTime >= idleTime)
+            if (currentIdleTime >= idleTime)
             {
                 //tell to jump
                 currentIdleTime = 0;
@@ -65,30 +67,30 @@ public class JumpingEnemy : MonoBehaviour
 
         // is on ground
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f,transform.position.y - 0.5f),
-        new Vector2(transform.position.x + 0.5f,transform.position.y - 0.51f), whatIsGround);
+            new Vector2(transform.position.x + 0.5f,transform.position.y - 0.51f), whatIsGround);
         
         //we fall on ground
         if(isGrounded && !isFalling)
         {   //set idle
-            isFalling = false;
             isJumping = false;
+            isFalling = false;
             isIdle = true;
-            ChangeAnimation(Animations.Idel);
+            ChangeAnimation(Animations.Idle);
         }
-        else if(transform.position.y > lastYpos && !isGrounded && !isIdle)
+        else if (transform.position.y > lastYPos && !isGrounded && !isIdle)
         {   //set jump up
             isJumping = true;
             isFalling = false;
             ChangeAnimation(Animations.Jumping);
         }
-        else if (transform.position.y < lastYpos && !isGrounded && !isIdle)
+        else if (transform.position.y < lastYPos && !isGrounded && !isIdle)
         {   //set falling
             isJumping = false;
             isFalling = true;
             ChangeAnimation(Animations.Falling);
         }
 
-        lastYpos = transform.position.y;
+        lastYPos = transform.position.y;
     }
 
     void Jump()

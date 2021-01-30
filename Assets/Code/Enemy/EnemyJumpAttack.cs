@@ -4,55 +4,56 @@ using UnityEngine;
 
 public class EnemyJumpAttack : MonoBehaviour
 {
-    [Header("For Petrolling")] 
+    [Header("For Petrolling")]
     [SerializeField] float moveSpeed;
-    [SerializeField] Transform groundCheckPoint;
-    [SerializeField] Transform wallCheckPoint;
-    [SerializeField] float circleRadius;
-    [SerializeField] LayerMask groundLayer;
     private float moveDirection = 1;
     private bool facingRight = true;
+    [SerializeField] Transform groundCheckPoint;
+    [SerializeField] Transform wallCheckPoint;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] float circleRadius;
     private bool checkingGround;
     private bool checkingWall;
 
-    [Header("For JumpAttack")] 
+    [Header("For JumpAttacking")]
     [SerializeField] float jumpHeight;
     [SerializeField] Transform player;
     [SerializeField] Transform groundCheck;
     [SerializeField] Vector2 boxSize;
     private bool isGrounded;
 
-    [Header("For SeeingPlayer")] 
+    [Header("For SeeingPlayer")]
     [SerializeField] Vector2 lineOfSite;
     [SerializeField] LayerMask playerLayer;
     private bool canSeePlayer;
-
-
-
-
-    [Header("Other")] 
+    [Header("Other")]
+    private Animator enemyAnim;
     private Rigidbody2D enemyRB;
-
     void Start()
     {
-        enemyRB = GetComponent<Rigidbody2D>();
+        enemyRB = GetComponent<Rigidbody2D>(); 
+        enemyAnim = GetComponent<Animator>();        
     }
+
 
     void FixedUpdate()
     {
-        checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position,circleRadius,groundLayer);
-        checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position,circleRadius,groundLayer);
+        checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position, circleRadius, groundLayer);
+        checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position, circleRadius, groundLayer);
         isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);
         canSeePlayer = Physics2D.OverlapBox(transform.position, lineOfSite, 0, playerLayer);
-        if(!canSeePlayer && isGrounded)
+        AnimationController();
+        if (!canSeePlayer && isGrounded)
         {
             Petrolling();
         }
+
+
     }
 
     void Petrolling()
     {
-        if(!checkingGround || checkingWall)
+        if (!checkingGround || checkingWall)
         {
             if (facingRight)
             {
@@ -69,17 +70,17 @@ public class EnemyJumpAttack : MonoBehaviour
     void JumpAttack()
     {
         float distanceFromPlayer = player.position.x - transform.position.x;
-        
+
         if (isGrounded)
         {
-            enemyRB.AddForce(new Vector2(distanceFromPlayer,jumpHeight), ForceMode2D.Impulse);
+            enemyRB.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
         }
     }
 
     void FlipTowardsPlayer()
     {
         float playerPosition = player.position.x - transform.position.x;
-        if (playerPosition<0 && facingRight == true)
+        if (playerPosition<0 && facingRight)
         {
             Flip();
         }
@@ -96,17 +97,24 @@ public class EnemyJumpAttack : MonoBehaviour
         transform.Rotate(0, 180, 0);
     }
 
-    // the blue balls of recegnishion
-    private void OnDrawGizmosSelected() 
+    void AnimationController()
     {
-        Gizmos.color = Color. blue;
-        Gizmos.DrawWireSphere(groundCheckPoint.position,circleRadius);
-        Gizmos.DrawWireSphere(wallCheckPoint.position,circleRadius);
+        enemyAnim.SetBool("canSeePlayer", canSeePlayer);
+        enemyAnim.SetBool("isGrounded", isGrounded);
+    }
+    
 
-        Gizmos.color = Color. red;
-        Gizmos.DrawCube(groundCheck.position,boxSize);
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(groundCheckPoint.position, circleRadius);
+        Gizmos.DrawWireSphere(wallCheckPoint.position, circleRadius);
 
-        Gizmos.color = Color. green;
-        Gizmos.DrawWireCube(transform.position,lineOfSite);
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(groundCheck.position, boxSize);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, lineOfSite);
+
     }
 }
