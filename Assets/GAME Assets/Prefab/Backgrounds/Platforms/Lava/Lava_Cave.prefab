@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5747706917008621835}
   - component: {fileID: 5747706917008621832}
   - component: {fileID: 5747706917008621833}
+  - component: {fileID: 1843971028043903879}
   m_Layer: 0
   m_Name: Lava_Cave
   m_TagString: BigStump
@@ -109,6 +110,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2183061, y: 0.18330202}
   m_EdgeRadius: 0
+--- !u!70 &1843971028043903879
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747706917008621830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.026941271, y: 0.070650905}
+  m_Size: {x: 1.1103629, y: 0.115425356}
+  m_Direction: 1
 --- !u!1 &5747706918210003885
 GameObject:
   m_ObjectHideFlags: 0

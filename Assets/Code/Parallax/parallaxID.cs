@@ -5,11 +5,11 @@ using UnityEngine;
 public class parallaxID : MonoBehaviour
 {
     // ID parallax
-    // Desert   = 0
-    // Forest   = 1
-    // Lava     = 2
-    // Wheat    = 3
-    // Snow     = 4
+    // Desert   = 0-4
+    // Forest   = 5-8
+    // Lava     = 9-12
+    // Wheat    = 13-16 
+    // Snow     = 17-20
     
     [SerializeField]
     private int _imageID;
@@ -27,19 +27,44 @@ public class parallaxID : MonoBehaviour
         switch(_imageID)
         {
             case 0:
-                Debug.Log("Desert");
                 break;
             case 1:
-                Debug.Log("Forest");
                 break;
             case 2:
-                Debug.Log("Lava");
                 break;
             case 3:
-                Debug.Log("Wheat");
                 break;
             case 4:
-                Debug.Log("Snow");
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
                 break;
         }
     }

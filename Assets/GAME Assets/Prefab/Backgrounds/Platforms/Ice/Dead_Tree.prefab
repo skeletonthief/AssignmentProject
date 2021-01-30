@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2364995285460473367}
   - component: {fileID: 2364995285460473369}
   - component: {fileID: 2364995285460473368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead_Branch_ (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2364995285748950517}
   - component: {fileID: 2364995285748950518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead_Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -690440415
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f041117008212d24e807dbe809998c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 2364995286246671897}
   - component: {fileID: 2364995286246671899}
   - component: {fileID: 2364995286246671898}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead_Branch_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 2364995286626146423}
   - component: {fileID: 2364995286626146425}
   - component: {fileID: 2364995286626146424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead_Branch_ (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 2364995286977403310}
   - component: {fileID: 2364995286977403312}
   - component: {fileID: 2364995286977403311}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rock_Ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 2364995287124633967}
   - component: {fileID: 2364995287124633969}
   - component: {fileID: 2364995287124633968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead_Branch_ (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 2364995287233692249}
   - component: {fileID: 2364995287233692251}
   - component: {fileID: 2364995287233692250}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead_Branch_ (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
