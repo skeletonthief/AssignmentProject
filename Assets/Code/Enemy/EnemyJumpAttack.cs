@@ -26,6 +26,7 @@ public class EnemyJumpAttack : MonoBehaviour
     [SerializeField] Vector2 lineOfSite;
     [SerializeField] LayerMask playerLayer;
     private bool canSeePlayer;
+    
     [Header("Other")]
     private Animator enemyAnim;
     private Rigidbody2D enemyRB;

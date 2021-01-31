@@ -204,7 +204,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   circleRadius: 0.2
-  jumpHeight: 5
+  jumpHeight: 9
   player: {fileID: 0}
   groundCheck: {fileID: 143152709211563895}
   boxSize: {x: 0.6, y: 0.1}

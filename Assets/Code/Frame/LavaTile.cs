@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GroundTile : MonoBehaviour
+public class LavaTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
 

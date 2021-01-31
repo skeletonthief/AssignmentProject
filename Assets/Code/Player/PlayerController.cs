@@ -34,29 +34,30 @@ public class PlayerController : MonoBehaviour
 
     void Update() //Grounded check and jump
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        //if (moveInput == 0)
-        //{
-        //    anim.SetBool("isRunning",false);
-        //}
-        //else 
-        //{
-        //    anim.SetBool("isRunning",true);
-        //}
-        
-        if(moveInput < 0)
+        if (moveInput == 0)
         {
-            transform.eulerAngles = new Vector3(0,0,0);
+            anim.SetBool("isRunning",false);
         }
-        else if(moveInput > 0)
+        else 
+        {
+            anim.SetBool("isRunning",true);
+        }
+        
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        
+        if(moveInput > 0)
         {
             transform.eulerAngles = new Vector3(0,180,0);
+        }
+        else if(moveInput < 0)
+        {
+            transform.eulerAngles = new Vector3(0,0,0);
         }
         
             //replace space with anything = (Space) 
         if(isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetTrigger("JumpUP");
             isJumping = true;
             jumpTimeClock = jumpTime;
             RB.velocity = Vector2.up * jumpForce;
@@ -69,8 +70,12 @@ public class PlayerController : MonoBehaviour
             {
                 RB.velocity = Vector2.up * jumpForce;
                 jumpTimeClock -= Time.deltaTime;
-            } else {
+                anim.SetBool("isJUMPING", false);
+            } 
+            else 
+            {
                 isJumping = false;
+                anim.SetBool("isJUMPING", true);
             }
             
         }

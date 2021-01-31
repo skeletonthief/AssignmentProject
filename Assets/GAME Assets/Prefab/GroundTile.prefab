@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 6968599921691850900}
   - component: {fileID: 3246074628151008838}
   - component: {fileID: 5666291945866687128}
-  - component: {fileID: 2023357474338153454}
   - component: {fileID: 3524755601213013807}
   m_Layer: 8
   m_Name: Background
@@ -185,18 +184,6 @@ MonoBehaviour:
   spawnRate: 1
   nextSpawn: 1
   hasSpawned: 0
---- !u!114 &2023357474338153454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2485352535068908037}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ced77d1a2dba5a4aab23a1649ed969a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &3524755601213013807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -447,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2950517652441403043}
   - component: {fileID: 8506899091867460703}
-  - component: {fileID: 6876348140012437544}
+  - component: {fileID: 5072728689695241589}
   m_Layer: 0
   m_Name: GroundTile
   m_TagString: Untagged
@@ -497,7 +484,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.326698, y: 0.6175957}
   m_EdgeRadius: 0
---- !u!114 &6876348140012437544
+--- !u!114 &5072728689695241589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -554,7 +541,6 @@ GameObject:
   - component: {fileID: 93776717004095369}
   - component: {fileID: 4022935353044087182}
   - component: {fileID: 5252290850760444753}
-  - component: {fileID: 2703932935851537500}
   - component: {fileID: 7595101388908273439}
   m_Layer: 8
   m_Name: Background
@@ -666,18 +652,6 @@ MonoBehaviour:
   spawnRate: 1
   nextSpawn: 1
   hasSpawned: 0
---- !u!114 &2703932935851537500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3185355983426709709}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ced77d1a2dba5a4aab23a1649ed969a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &7595101388908273439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -871,7 +845,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8870270703157638088}
   - component: {fileID: 2761173474446627350}
-  - component: {fileID: 6143890471287406126}
   m_Layer: 8
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -941,18 +914,6 @@ MonoBehaviour:
   spawnRate: 1
   nextSpawn: 1
   hasSpawned: 1
---- !u!114 &6143890471287406126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4041314770585550116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ced77d1a2dba5a4aab23a1649ed969a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4495644406071534506
 GameObject:
   m_ObjectHideFlags: 0
