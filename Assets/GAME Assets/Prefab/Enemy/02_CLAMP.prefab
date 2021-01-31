@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2952859651162331989}
   - component: {fileID: 688980909722008522}
-  - component: {fileID: 5825343845437139425}
   - component: {fileID: 429161637361390829}
   - component: {fileID: 1124356776437207442}
+  - component: {fileID: 200303735}
   m_Layer: 0
   m_Name: 02_CLAMP
   m_TagString: Enemy
@@ -84,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5825343845437139425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20070482391742599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf1cb6f4573c7f4aa062d27029f1c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
-  agroRange: 2
-  moveSpeed: 1
-  player: {fileID: 0}
 --- !u!70 &429161637361390829
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,3 +121,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &200303735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20070482391742599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd260700eff4274c8327487f502c8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  agroRange: 7
+  moveSpeed: 2
+  player: {fileID: 0}

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5919569532469009917}
   - component: {fileID: 7202494938117680120}
   - component: {fileID: 4396716308357779928}
+  - component: {fileID: 752856305086162566}
+  - component: {fileID: 461627154}
   m_Layer: 0
   m_Name: 07_TAMBIL
   m_TagString: Enemy
@@ -98,12 +100,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!58 &4396716308357779928
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -120,3 +122,31 @@ CircleCollider2D:
   m_Offset: {x: -0.00411129, y: -0.008224487}
   serializedVersion: 2
   m_Radius: 0.32382298
+--- !u!114 &752856305086162566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846382981662260831}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b7ab776f1f28e4fa24c6a425542db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &461627154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846382981662260831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1cb6f4573c7f4aa062d27029f1c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  agroRange: 3
+  moveSpeed: 4
+  player: {fileID: 0}

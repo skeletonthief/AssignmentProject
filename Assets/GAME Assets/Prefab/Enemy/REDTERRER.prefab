@@ -145,7 +145,7 @@ SpriteRenderer:
   m_Size: {x: 1.44, y: 1.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &4822271487573633043
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68203fc8176387449f9e69c94cbacdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 1
   groundCheckPoint: {fileID: 8560839757663184450}
   wallCheckPoint: {fileID: 4145790230038528890}
   groundLayer:

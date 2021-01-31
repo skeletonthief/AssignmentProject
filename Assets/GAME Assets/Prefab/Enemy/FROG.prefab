@@ -166,7 +166,7 @@ MonoBehaviour:
   faceingRight: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 4294967295
   isGrounded: 0
   isFalling: 0
   isJumping: 0
