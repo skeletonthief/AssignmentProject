@@ -22,7 +22,7 @@ public class GroundSpawnerLava : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 2; i++)
         {
             SpawnLTile1();
             SpawnLTile2();
