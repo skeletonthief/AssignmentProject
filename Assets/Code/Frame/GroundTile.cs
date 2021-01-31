@@ -6,7 +6,7 @@ public class GroundTile : MonoBehaviour
 
     private void Start()
     {
-        //groundSpawner = GameObject.FindObjectType<GroundSpawner>(); // error
+        groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
     }
 
     private void OnTriggerExit2D(Collider2D other) 
