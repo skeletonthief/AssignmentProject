@@ -25,17 +25,19 @@ public class HeartSystem : MonoBehaviour
 
     public void TakeDamage(int d)
     {
-        if (life >= 1)
+        if(tag == "Player")
         {
-            life -= d;  //3-1=2
-            Debug.Log("Ouch!"); 
-            Destroy(hearts[life].gameObject); //[2]
-            if(life <1)
+            if (life >= 1)
             {
-                dead = true; 
-                SceneManager.LoadScene("Game Over");
+                life -= d;  //3-1=2
+                Debug.Log("Ouch!"); 
+                Destroy(hearts[life].gameObject); //[2]
+                if(life <1)
+                {
+                    dead = true; 
+                    SceneManager.LoadScene("Game Over");
+                }
             }
         }
-        
     }
 }

@@ -19,14 +19,14 @@ public class HurtPlayer : MonoBehaviour
                 Debug.Log("Ouch!"); 
                 heartSystem.TakeDamage(damageToGive);
             }
-            if ( Time.time < hitLast )      //When enemy deals damage there is wait peroid
-            return;
-            hitLast = Time.time + hitDelay;
+            //if ( Time.time < hitLast )      //When enemy deals damage there is wait peroid
+            //return;
+            //hitLast = Time.time + hitDelay;
         }
     }
 
     //When enemy deals damage there is wait peroid
-    void OnTriggerStay (Collider other)
+    /*void OnTriggerStay (Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -37,7 +37,7 @@ public class HurtPlayer : MonoBehaviour
             FindObjectOfType<HeartSystem> ().TakeDamage(damageToGive);
             hitLast = Time.time;
         }
-    }
+    }*/
 }   
 
 

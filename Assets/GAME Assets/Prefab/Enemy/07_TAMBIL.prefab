@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4396716308357779928}
   - component: {fileID: 752856305086162566}
   - component: {fileID: 461627154}
+  - component: {fileID: 3452047273998973191}
+  - component: {fileID: 3313009647678646715}
   m_Layer: 0
   m_Name: 07_TAMBIL
   m_TagString: Enemy
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 846382981662260831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.75, y: -17.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7082497, y: 1.7082497, z: 0.85412484}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -150,3 +152,32 @@ MonoBehaviour:
   agroRange: 3
   moveSpeed: 4
   player: {fileID: 0}
+--- !u!70 &3452047273998973191
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846382981662260831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01018581, y: -0.0238875}
+  m_Size: {x: 0.645524, y: 0.645524}
+  m_Direction: 0
+--- !u!114 &3313009647678646715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846382981662260831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1651a4faf35fe449af470fb25b4340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1

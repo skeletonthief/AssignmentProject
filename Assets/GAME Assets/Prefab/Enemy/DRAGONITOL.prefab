@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3327750868813339362}
   - component: {fileID: 3327750868813339389}
   - component: {fileID: 3327750868813339376}
+  - component: {fileID: 5073831338214833779}
   m_Layer: 0
   m_Name: DRAGONITOL
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3327750868813339388}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.78, y: -13.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1651a4faf35fe449af470fb25b4340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 0
+  damageToGive: 1
 --- !u!70 &3327750868813339365
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -197,6 +198,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &5073831338214833779
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3327750868813339388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.099788666, y: -0.19482708}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.65, y: 4.05}
+    newSize: {x: 3.65, y: 4.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.131527, y: 1.3034344}
+  m_EdgeRadius: 0
 --- !u!1 &8536959229913936100
 GameObject:
   m_ObjectHideFlags: 0
