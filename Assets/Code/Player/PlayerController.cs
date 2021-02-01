@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             jumpTimeClock = jumpTime;
             RB.velocity = Vector2.up * jumpForce;
+            //jump sound
+            GetComponent<AudioSource>().Play();
         }
         
         if(Input.GetKey(KeyCode.Space) && isJumping == true)
