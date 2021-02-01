@@ -1845,6 +1845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768325987}
   - component: {fileID: 768325988}
+  - component: {fileID: 768325989}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -1924,7 +1925,31 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 768325989}
+        m_MethodName: SetLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &768325989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768325986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ff8cc848d806144971cfa3cfb84a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 0fc7c5dc70bfc164293d1fd6ec8cbe7e, type: 2}
 --- !u!1 &831187409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,6 +2258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1053145938}
   - component: {fileID: 1053145939}
+  - component: {fileID: 1053145940}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -2312,7 +2338,31 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1053145940}
+        m_MethodName: SetLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1053145940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053145937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ff8cc848d806144971cfa3cfb84a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: b27ba0145226e13498a136c887eda7ef, type: 2}
 --- !u!1 &1110175823
 GameObject:
   m_ObjectHideFlags: 0

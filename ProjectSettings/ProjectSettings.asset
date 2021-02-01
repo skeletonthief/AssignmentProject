@@ -43,7 +43,7 @@ PlayerSettings:
   - logo: {fileID: 21300000, guid: 6bbc7817e8da01045b5750539bb59fe4, type: 3}
     duration: 4
   - logo: {fileID: 21300000, guid: 28b9c4144c10c174c8aaca0989c6eca3, type: 3}
-    duration: 4
+    duration: 3
   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 4aa675ba82c9348479404fe1c258e8e2,
     type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -129,7 +129,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 0.3
+  bundleVersion: 0.4
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

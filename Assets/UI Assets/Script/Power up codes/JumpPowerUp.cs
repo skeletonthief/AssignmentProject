@@ -20,6 +20,7 @@ public class JumpPowerUp : MonoBehaviour
         PlayerController playerScript = player.GetComponent<PlayerController>(); 
         if (playerScript)
             {
+                GetComponent<AudioSource>().Play();
                 playerScript.jumpForce += increase; 
                 Debug.Log("Power up picked up!"); 
                 GetComponent<SpriteRenderer>().enabled = false;

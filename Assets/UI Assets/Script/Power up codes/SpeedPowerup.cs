@@ -20,6 +20,7 @@ public class SpeedPowerup : MonoBehaviour
         PlayerController playerScript = player.GetComponent<PlayerController>(); 
         if (playerScript)
             {
+                GetComponent<AudioSource>().Play();
                 playerScript.speed += increase; 
                 Debug.Log("Power up picked up!"); 
                 GetComponent<SpriteRenderer>().enabled = false;
