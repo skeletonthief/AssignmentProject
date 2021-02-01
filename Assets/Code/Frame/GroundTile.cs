@@ -13,8 +13,8 @@ public class GroundTile : MonoBehaviour
     {
         groundSpawner.SpawnGTile();
         //groundSpawner.SpawnLTile();
-        // 5 seconds
-        Destroy(gameObject, 5);
+        // 10 seconds
+        Destroy(gameObject, 10);
     }
 
     private void Update()

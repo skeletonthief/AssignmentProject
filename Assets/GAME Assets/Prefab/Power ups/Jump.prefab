@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f15312e66a563c4ea3566d6faccf4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increase: 5
+  increase: 4
   duration: 4
 --- !u!50 &8115657340582906325
 Rigidbody2D:
