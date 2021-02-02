@@ -24,6 +24,6 @@ public class GameOverMenu : MonoBehaviour
     // Go to title menu 
     public void TitleMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
     }
 }
