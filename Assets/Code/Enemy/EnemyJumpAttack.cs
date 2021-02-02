@@ -18,6 +18,7 @@ public class EnemyJumpAttack : MonoBehaviour
     [Header("For JumpAttacking")]
     [SerializeField] float jumpHeight;
     [SerializeField] Transform player;
+    public GameObject playerid;
     [SerializeField] Transform groundCheck;
     [SerializeField] Vector2 boxSize;
     private bool isGrounded;
@@ -30,8 +31,11 @@ public class EnemyJumpAttack : MonoBehaviour
     [Header("Other")]
     private Animator enemyAnim;
     private Rigidbody2D enemyRB;
+    
     void Start()
     {
+        playerid = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         enemyRB = GetComponent<Rigidbody2D>(); 
         enemyAnim = GetComponent<Animator>();        
     }

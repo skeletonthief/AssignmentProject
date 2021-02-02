@@ -1456,7 +1456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396663406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.54, y: 1.21, z: 0}
+  m_LocalPosition: {x: 64.47, y: 1.69, z: 0}
   m_LocalScale: {x: 0.56, y: 0.56, z: 0.56}
   m_Children:
   - {fileID: 1173514272}
@@ -2571,6 +2571,38 @@ MonoBehaviour:
   lavaTile1: {fileID: 4287243072560531485, guid: 174c9064b496e764d8cf9d5cc41c36de,
     type: 3}
   lavaTile2: {fileID: 722757962320798113, guid: 4fc18a6576618654b8fa6840a0c7086e,
+    type: 3}
+  lavaTile3: {fileID: 4287243072560531485, guid: 42407a60d99c242469c4562e8835ed68,
+    type: 3}
+  lavaTile4: {fileID: 722757962320798113, guid: f72ccbb38405de44ab72120d555964dc,
+    type: 3}
+  lavaTile5: {fileID: 4287243072560531485, guid: c10951b6425c25b41baf4f4cb11f733b,
+    type: 3}
+  lavaTile6: {fileID: 722757962320798113, guid: 072a0f4ac1686554aacdf22a8cd0acba,
+    type: 3}
+  lavaTile7: {fileID: 4287243072560531485, guid: 0ff2fcd940720f549a6d6dbe90b0d94a,
+    type: 3}
+  lavaTile8: {fileID: 722757962320798113, guid: a1fbf59154bf5464bb9f45e9a0013582,
+    type: 3}
+  lavaTile9: {fileID: 4287243072560531485, guid: ea667410bf796dc4ba03cf0b6681fe62,
+    type: 3}
+  lavaTile10: {fileID: 722757962320798113, guid: c20da71302b913c49a8073648613a892,
+    type: 3}
+  lavaTile11: {fileID: 4287243072560531485, guid: 545718a6e545be64c9798275370ed6b3,
+    type: 3}
+  lavaTile12: {fileID: 722757962320798113, guid: 06d1555859aee58409af3256e232e09f,
+    type: 3}
+  lavaTile13: {fileID: 4287243072560531485, guid: 0ef1400f039e22b459632e8ece1b18bb,
+    type: 3}
+  lavaTile14: {fileID: 722757962320798113, guid: 0920232772e2e8a4fabee9dad17efd79,
+    type: 3}
+  lavaTile15: {fileID: 4287243072560531485, guid: 309bd575543784c4eb0a46f34c236373,
+    type: 3}
+  lavaTile16: {fileID: 722757962320798113, guid: 125018aad3773b24dbda641c66a8c682,
+    type: 3}
+  lavaTile17: {fileID: 4287243072560531485, guid: ffa0c1eadd451b049978f3a602140fe0,
+    type: 3}
+  lavaTile18: {fileID: 722757962320798113, guid: a1ab4e310435ec94893fa5b998f09f8b,
     type: 3}
 --- !u!114 &667656387
 MonoBehaviour:
@@ -4322,7 +4354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.54, y: 3.3500001, z: -10}
+  m_LocalPosition: {x: 64.47, y: 3.8300002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 123406000}
@@ -6834,7 +6866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 598.12, y: 76.363}
+  m_AnchoredPosition: {x: 598.12, y: 76.36279}
   m_SizeDelta: {x: 1196.2495, y: 152.725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456773243
@@ -9010,7 +9042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941942035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.54, y: 3.3500001, z: -10}
+  m_LocalPosition: {x: 64.47, y: 3.8300002, z: -10}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 563624554}
