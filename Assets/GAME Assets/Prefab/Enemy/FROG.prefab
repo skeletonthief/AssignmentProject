@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2789743746249543622}
   - component: {fileID: 2789743746249543617}
   - component: {fileID: 2789743746249543616}
-  - component: {fileID: 2789743746249543619}
   - component: {fileID: 2789743746249543618}
   - component: {fileID: 2789743746249543623}
   - component: {fileID: 497794911200436708}
   - component: {fileID: 1796131099}
+  - component: {fileID: 948483842}
   m_Layer: 0
   m_Name: FROG
   m_TagString: Enemy
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2789743746249543485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.87, y: -17.135, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,51 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &2789743746249543619
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2789743746249543485}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.02}
-    newSize: {x: 1.35, y: 1.02}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.4407997, y: 0.02881813}
-      - {x: 0.24860394, y: 0.14746895}
-      - {x: 0.15945816, y: 0.18288612}
-      - {x: 0.08339691, y: 0.30039406}
-      - {x: -0.06943817, y: 0.3033164}
-      - {x: -0.07121658, y: 0.27010345}
-      - {x: -0.1955986, y: 0.26790047}
-      - {x: -0.205, y: 0.29999998}
-      - {x: -0.20831451, y: 0.32497558}
-      - {x: -0.29163283, y: 0.3305374}
-      - {x: -0.36494735, y: 0.24331641}
-      - {x: -0.39997175, y: 0.17609733}
-      - {x: -0.40275267, y: 0.054488905}
-      - {x: -0.25719467, y: -0.0920932}
-      - {x: -0.24913406, y: -0.2121067}
-      - {x: -0.1710466, y: -0.347221}
-      - {x: -0.22831832, y: -0.45331642}
-      - {x: 0.49387634, y: -0.45331642}
-      - {x: 0.5583145, y: -0.35551107}
-      - {x: 0.5527565, y: -0.19283165}
 --- !u!114 &2789743746249543618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,8 +127,8 @@ MonoBehaviour:
   isGrounded: 0
   isFalling: 0
   isJumping: 0
-  jumpForceX: 2
-  jumpForceY: 4
+  jumpForceX: 3
+  jumpForceY: 6
   lastYPos: 0
   currentAnim: 0
   rb: {fileID: 2789743746249543616}
@@ -214,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07744408, y: -0.046466827}
+  m_Offset: {x: 0.15844613, y: -0.4013364}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -225,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.009243, y: 0.803154}
+  m_Size: {x: 0.7392336, y: 0.09341484}
   m_EdgeRadius: 0
 --- !u!114 &1796131099
 MonoBehaviour:
@@ -240,3 +195,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 1
+--- !u!58 &948483842
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789743746249543485}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.100289665, y: -0.100289665}
+  serializedVersion: 2
+  m_Radius: 0.35870233

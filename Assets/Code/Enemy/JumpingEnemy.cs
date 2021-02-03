@@ -67,10 +67,10 @@ public class JumpingEnemy : MonoBehaviour
 
         // is on ground
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f),
-            new Vector2(transform.position.x + 0.5f,transform.position.y - 0.51f), whatIsGround);
+            new Vector2(transform.position.x + 0.5f, transform.position.y - 0.51f), whatIsGround);
         
         //we fall on ground
-        if(isGrounded && !isFalling)
+        /*if(isGrounded && !isFalling)
         {   //set idle
             isFalling = false;
             isJumping = false;
@@ -81,14 +81,16 @@ public class JumpingEnemy : MonoBehaviour
         {   //set jump up
             isJumping = true;
             isFalling = false;
+            isIdle = false;
             ChangeAnimation(Animations.Jumping);
         }
         else if (transform.position.y < lastYPos && !isGrounded && !isIdle)
         {   //set falling
             isJumping = false;
             isFalling = true;
+            isIdle = false;
             ChangeAnimation(Animations.Falling);
-        }
+        }*/
 
         lastYPos = transform.position.y;
     }
