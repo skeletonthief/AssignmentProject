@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 6635079322364541862}
   - component: {fileID: 6955899496936681947}
   - component: {fileID: 7502308412812592558}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: elevetor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 8645807798220985528}
   - component: {fileID: 249867554384636936}
   - component: {fileID: 1492282543433451371}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: elevetor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
