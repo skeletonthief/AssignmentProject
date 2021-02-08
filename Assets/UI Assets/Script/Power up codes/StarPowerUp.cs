@@ -15,10 +15,11 @@ public class StarPowerUp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GetComponent<AudioSource>().Play();
+        
         if (other.gameObject.tag == "Player" )
         {
             theScoreManager.AddScore(scoreToGive); 
+            GetComponent<AudioSource>().Play();
         }
         Debug.Log("Power up picked up!"); 
         Destroy(gameObject); 
