@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4396716308357779928}
   - component: {fileID: 3452047273998973191}
   - component: {fileID: 3313009647678646715}
-  - component: {fileID: 524563594064142318}
+  - component: {fileID: 3767922934626624314}
   m_Layer: 0
   m_Name: 07_TAMBIL
   m_TagString: Enemy
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 1
---- !u!114 &524563594064142318
+--- !u!114 &3767922934626624314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,10 +161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 846382981662260831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd260700eff4274c8327487f502c8f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 58eb887265d4b504e968777b61f9028d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  agroRange: 2
+  agroRange: 3
   moveSpeed: 3
   player: {fileID: 0}
